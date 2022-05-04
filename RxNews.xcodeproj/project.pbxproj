@@ -9,21 +9,30 @@
 /* Begin PBXBuildFile section */
 		1EB59C54282225BE00658473 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB59C53282225BE00658473 /* AppDelegate.swift */; };
 		1EB59C56282225BE00658473 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB59C55282225BE00658473 /* SceneDelegate.swift */; };
-		1EB59C58282225BE00658473 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB59C57282225BE00658473 /* ViewController.swift */; };
 		1EB59C5B282225BE00658473 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EB59C59282225BE00658473 /* Main.storyboard */; };
 		1EB59C5D282225BF00658473 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EB59C5C282225BF00658473 /* Assets.xcassets */; };
 		1EB59C60282225BF00658473 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EB59C5E282225BF00658473 /* LaunchScreen.storyboard */; };
+		1EB59C682822266900658473 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB59C672822266900658473 /* NewsTableViewController.swift */; };
+		1EB59C6B2822283400658473 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 1EB59C6A2822283400658473 /* RxCocoa */; };
+		1EB59C6D2822283400658473 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 1EB59C6C2822283400658473 /* RxRelay */; };
+		1EB59C6F2822283400658473 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1EB59C6E2822283400658473 /* RxSwift */; };
+		1EB59C7228222B1300658473 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB59C7128222B1300658473 /* Article.swift */; };
+		1EB59C7528222D3400658473 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB59C7428222D3400658473 /* ArticleTableViewCell.swift */; };
+		1EB59C7828222E9300658473 /* URLRequest+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB59C7728222E9300658473 /* URLRequest+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1EB59C50282225BE00658473 /* RxNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EB59C53282225BE00658473 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EB59C55282225BE00658473 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1EB59C57282225BE00658473 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1EB59C5A282225BE00658473 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1EB59C5C282225BF00658473 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1EB59C5F282225BF00658473 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1EB59C61282225BF00658473 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EB59C672822266900658473 /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		1EB59C7128222B1300658473 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		1EB59C7428222D3400658473 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		1EB59C7728222E9300658473 /* URLRequest+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +40,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EB59C6F2822283400658473 /* RxSwift in Frameworks */,
+				1EB59C6D2822283400658473 /* RxRelay in Frameworks */,
+				1EB59C6B2822283400658473 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +68,42 @@
 		1EB59C52282225BE00658473 /* RxNews */ = {
 			isa = PBXGroup;
 			children = (
+				1EB59C7628222E8700658473 /* Extensions */,
+				1EB59C7328222D2900658473 /* Cells */,
+				1EB59C7028222B0500658473 /* Models */,
 				1EB59C53282225BE00658473 /* AppDelegate.swift */,
 				1EB59C55282225BE00658473 /* SceneDelegate.swift */,
-				1EB59C57282225BE00658473 /* ViewController.swift */,
+				1EB59C672822266900658473 /* NewsTableViewController.swift */,
 				1EB59C59282225BE00658473 /* Main.storyboard */,
 				1EB59C5C282225BF00658473 /* Assets.xcassets */,
 				1EB59C5E282225BF00658473 /* LaunchScreen.storyboard */,
 				1EB59C61282225BF00658473 /* Info.plist */,
 			);
 			path = RxNews;
+			sourceTree = "<group>";
+		};
+		1EB59C7028222B0500658473 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1EB59C7128222B1300658473 /* Article.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1EB59C7328222D2900658473 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1EB59C7428222D3400658473 /* ArticleTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		1EB59C7628222E8700658473 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1EB59C7728222E9300658473 /* URLRequest+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +122,11 @@
 			dependencies = (
 			);
 			name = RxNews;
+			packageProductDependencies = (
+				1EB59C6A2822283400658473 /* RxCocoa */,
+				1EB59C6C2822283400658473 /* RxRelay */,
+				1EB59C6E2822283400658473 /* RxSwift */,
+			);
 			productName = RxNews;
 			productReference = 1EB59C50282225BE00658473 /* RxNews.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +155,9 @@
 				Base,
 			);
 			mainGroup = 1EB59C47282225BD00658473;
+			packageReferences = (
+				1EB59C692822283400658473 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 1EB59C51282225BE00658473 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,7 +185,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EB59C58282225BE00658473 /* ViewController.swift in Sources */,
+				1EB59C7528222D3400658473 /* ArticleTableViewCell.swift in Sources */,
+				1EB59C7828222E9300658473 /* URLRequest+Extension.swift in Sources */,
+				1EB59C7228222B1300658473 /* Article.swift in Sources */,
+				1EB59C682822266900658473 /* NewsTableViewController.swift in Sources */,
 				1EB59C54282225BE00658473 /* AppDelegate.swift in Sources */,
 				1EB59C56282225BE00658473 /* SceneDelegate.swift in Sources */,
 			);
@@ -360,6 +410,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1EB59C692822283400658473 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1EB59C6A2822283400658473 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1EB59C692822283400658473 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		1EB59C6C2822283400658473 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1EB59C692822283400658473 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		1EB59C6E2822283400658473 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1EB59C692822283400658473 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1EB59C48282225BD00658473 /* Project object */;
 }
