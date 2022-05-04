@@ -12,7 +12,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        UINavigationBar.appearance().barTintColor = .systemOrange
+        UINavigationBar.appearance().barTintColor = #colorLiteral(red: 0.02622381784, green: 0.7744674087, blue: 0.6751183867, alpha: 1)
         
         return true
     }

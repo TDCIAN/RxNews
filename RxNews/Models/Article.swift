@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct ArticlesList: Decodable {
+struct ArticlesResponse: Decodable {
     let articles: [Article]
 }
 
-extension ArticlesList {
-    static var all: Resource<ArticlesList> = {
+extension ArticlesResponse {
+    static var all: Resource<ArticlesResponse> = {
         let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=6d61b0036eb24a718896dca571428bc2")!
         return Resource(url: url)
     }()
